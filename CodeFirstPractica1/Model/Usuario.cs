@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
-
-
+using CodeFirstPractica1.DAL;
 
 namespace CodeFirstPractica1.Model
 {
-    public class Usuario
+    [PropertyChanged.ImplementPropertyChanged]
+
+    public class Usuario : PropertyValidateModel
     {   
         public Usuario()
         {

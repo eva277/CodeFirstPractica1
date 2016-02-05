@@ -4,10 +4,14 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CodeFirstPractica1.DAL;
+
 
 namespace CodeFirstPractica1.Model
 {
-    public class Asistencia
+    [PropertyChanged.ImplementPropertyChanged]
+
+    public class Asistencia : PropertyValidateModel
     {
         public Asistencia()
         {

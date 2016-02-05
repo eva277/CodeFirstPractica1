@@ -5,13 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using CodeFirstPractica1.DAL;
 
 
 namespace CodeFirstPractica1.Model
-
 {
-    public class Cliente
-    {
+    [PropertyChanged.ImplementPropertyChanged]
+
+    public class Cliente : PropertyValidateModel
+{
         public Cliente()
         {
             Contactos = new Collection<Contacto>();
