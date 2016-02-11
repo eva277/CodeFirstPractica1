@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodeFirstPractica1.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,18 +7,20 @@ using System.Threading.Tasks;
 
 namespace CodeFirstPractica1.Model
 {
-    public class Incidencia
+    [PropertyChanged.ImplementPropertyChanged]
+
+    public class Incidencia : PropertyValidateModel
     {
         public Incidencia()
         {
             
         }
-        public virtual int IncidenciaId { get; set; }
-        public virtual DateTime FechaIni { get; set; }
-        public virtual DateTime FechaFin { get; set; }
-        public virtual DateTime HoraIni { get; set; }
-        public virtual DateTime HoraFin { get; set; }
-        public virtual bool Concluido { get; set; }
+        public int IncidenciaId { get; set; }
+        public DateTime FechaIni { get; set; }
+        public DateTime FechaFin { get; set; }
+        public DateTime HoraIni { get; set; }
+        public DateTime HoraFin { get; set; }
+        public bool Concluido { get; set; }
         public virtual ICollection<Asistencia> Asistencias { get; set; }
     }
 }

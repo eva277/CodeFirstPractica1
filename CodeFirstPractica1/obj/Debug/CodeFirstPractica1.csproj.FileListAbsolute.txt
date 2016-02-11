@@ -17,8 +17,6 @@ C:\Users\dam215\Documents\Visual Studio 2015\Projects\CodeFirstPractica1\CodeFir
 C:\Users\dam215\Documents\Visual Studio 2015\Projects\CodeFirstPractica1\CodeFirstPractica1\obj\Debug\CodeFirstPractica1.exe
 C:\Users\dam215\Documents\Visual Studio 2015\Projects\CodeFirstPractica1\CodeFirstPractica1\obj\Debug\CodeFirstPractica1.pdb
 C:\Users\dam215\Documents\Visual Studio 2015\Projects\CodeFirstPractica1\CodeFirstPractica1\obj\Debug\CodeFirstPractica1.Migrations._1.resources
-C:\Users\dam215\Documents\Visual Studio 2015\Projects\CodeFirstPractica1\CodeFirstPractica1\obj\Debug\CodeFirstPractica1.Migrations._2.resources
-C:\Users\dam215\Documents\Visual Studio 2015\Projects\CodeFirstPractica1\CodeFirstPractica1\obj\Debug\CodeFirstPractica1.Migrations._3.resources
 C:\Users\dam215\Documents\Visual Studio 2015\Projects\CodeFirstPractica1\CodeFirstPractica1\obj\Debug\CodeFirstPractica1.Migrations.final.resources
 C:\Users\dam215\Documents\Visual Studio 2015\Projects\CodeFirstPractica1\CodeFirstPractica1\obj\Debug\CodeFirstPractica1.Migrations.final2.resources
 C:\Users\dam215\Documents\Visual Studio 2015\Projects\CodeFirstPractica1\CodeFirstPractica1\bin\Debug\PropertyChanged.dll

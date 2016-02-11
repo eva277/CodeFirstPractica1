@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodeFirstPractica1.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,14 +7,17 @@ using System.Threading.Tasks;
 
 namespace CodeFirstPractica1.Model
 {
-    public class Conexion
+    [PropertyChanged.ImplementPropertyChanged]
+
+    public class Conexion : PropertyValidateModel
     {
+
         public Conexion()
         {
 
         }
-        public virtual int ConexionId { get; set; }
-        public virtual string Parametro { get; set; }
-        public virtual string Valor { get; set; }
+        public int ConexionId { get; set; }
+        public string Parametro { get; set; }
+        public string Valor { get; set; }
     }
 }

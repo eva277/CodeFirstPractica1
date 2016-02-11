@@ -21,17 +21,17 @@ namespace CodeFirstPractica1.Model
 
         }
 
-        public virtual int ContactoId { get; set; }
-        [Required]
+        public int ContactoId { get; set; }
+        [Required(ErrorMessage = "Nombre es obligatorio")]
 
-        public virtual string Nombre { get; set; }
+        public string Nombre { get; set; }
         [StringLength(12, MinimumLength = 9)]
         [Phone]
         [DataType(DataType.PhoneNumber, ErrorMessage = "El numero de telefono no es valido")]
-        public virtual string Telefono { get; set; }
+        public string Telefono { get; set; }
         [Required(ErrorMessage = "Email es obligatorio")]
         [EmailAddress(ErrorMessage = "Email invalido")]
-        public virtual string Email { get; set; }
+        public string Email { get; set; }
         public virtual ICollection<Visita> Visitas { get; set; }
         public virtual ICollection<Asistencia> Asistencias { get; set; }
         public virtual Cliente Cliente { get; set; }

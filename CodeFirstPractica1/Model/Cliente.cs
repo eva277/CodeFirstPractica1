@@ -21,25 +21,25 @@ namespace CodeFirstPractica1.Model
 
         }
 
-        public virtual int ClienteId { get; set; }
+        public int ClienteId { get; set; }
         [Required]
 
-        public virtual string Nombre { get; set; }
+        public string Nombre { get; set; }
         [Required]
         [StringLength(30, MinimumLength = 5)]
-        public virtual string Apellidos { get; set; }
+        public string Apellidos { get; set; }
         [Display(Name = "Nombre Completo")]
 
-        public virtual string nombreCompleto
+        public string nombreCompleto
         {
             get { return Nombre + " " + Apellidos; }
         }
 
-        public virtual string Descripcion { get; set; }
+        public string Descripcion { get; set; }
 
-        public virtual int CodPostal { get; set; }
-        public virtual string Clase { get; set; }
-        public virtual string TlfnCentralita { get; set; }
+        public int CodPostal { get; set; }
+        public string Clase { get; set; }
+        public string TlfnCentralita { get; set; }
         public virtual ICollection<Contacto> Contactos {get;set;}
         public virtual ICollection<Equipo> Equipos { get; set; }
 

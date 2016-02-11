@@ -1,0 +1,55 @@
+﻿<Window x:Class="CodeFirstPractica1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodeFirstPractica1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Validation.ErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <StackPanel>
+                            <Border BorderThickness="2" BorderBrush="DarkRed">
+                                <StackPanel>
+                                    <AdornedElementPlaceholder    
+                                x:Name="errorControl" />
+                                </StackPanel>
+                            </Border>
+                            <TextBlock Text="{Binding AdornedElement.ToolTip    
+                        , ElementName=errorControl}" Foreground="Red"  Width="300"/>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="BorderBrush" Value="Red" />
+                    <Setter Property="BorderThickness" Value="1" />
+                    <Setter Property="ToolTip"    
+                Value="{Binding RelativeSource={RelativeSource Self}    
+                    , Path=(Validation.Errors)[0].ErrorContent}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Label x:Name="label" Content="Id" HorizontalAlignment="Left" Margin="32,33,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Nombre" HorizontalAlignment="Left" Margin="32,59,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label4" Content="Telefono" HorizontalAlignment="Left" Margin="32,90,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Email" HorizontalAlignment="Left" Margin="32,121,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxId" HorizontalAlignment="Left" Height="23" Margin="96,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxNombre" Text="{Binding Nombre, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" HorizontalAlignment="Left" Height="23" Margin="96,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxMail" Text="{Binding Email, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"  HorizontalAlignment="Left" Height="23" Margin="96,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="TexBoxTfno" Text="{Binding Telefono, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"  HorizontalAlignment="Left" Height="23" Margin="96,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="234,33,0,0" VerticalAlignment="Top" Height="142" Width="273"/>
+        <Button x:Name="AddButton" Content="Añadir" HorizontalAlignment="Left" Margin="41,193,0,0" VerticalAlignment="Top" Width="75" Click="AddButton_Click" />
+        <Button x:Name="ModificateButton" Content="Modificar" HorizontalAlignment="Left" Margin="121,193,0,0" VerticalAlignment="Top" Width="75" Click="ModificateButton_Click" />
+        <Button x:Name="DropButton" Content="Eliminar" HorizontalAlignment="Left" Margin="201,193,0,0" VerticalAlignment="Top" Width="75" Click="DropButton_Click" />
+        <Button x:Name="ViewVisitasButtonr" Content="Ver Visitas" HorizontalAlignment="Left" Margin="80,223,0,0" VerticalAlignment="Top" Width="75" />
+        <Button x:Name="ViewAsistenciasButton" Content="Ver Asistencias" HorizontalAlignment="Left" Margin="160,223,0,0" VerticalAlignment="Top" Width="92" />
+
+    </Grid>
+</Window>

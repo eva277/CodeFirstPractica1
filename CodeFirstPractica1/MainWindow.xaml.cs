@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Linq;
+using CodeFirstPractica1.DAL;
+using CodeFirstPractica1.Model;
 
 namespace CodeFirstPractica1
 {
@@ -20,9 +23,41 @@ namespace CodeFirstPractica1
     /// </summary>
     public partial class MainWindow : Window
     {
+        Contacto contacto;
+        PropertyValidateModel validador = new PropertyValidateModel();
+        private UnitOfWork uow = new UnitOfWork();
+
         public MainWindow()
         {
             InitializeComponent();
+            contacto = new Contacto();
+            DataContext = contacto;
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            contacto.Nombre = textBoxNombre.Text;
+            contacto.Telefono=texBoxTfno.Text;
+            contacto.Email = textBoxMail.Text;
+            if (validador.errrores(contacto) != "")
+            {
+                MessageBox.Show(validador.errrores(contacto));
+            }
+            else
+            {
+                uow.RepositorioContacto.Insert(contacto);
+                uow.Save();
+            }
+        }
+
+        private void ModificateButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DropButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

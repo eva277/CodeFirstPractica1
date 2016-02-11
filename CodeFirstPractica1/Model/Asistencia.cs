@@ -19,12 +19,12 @@ namespace CodeFirstPractica1.Model
 
         }
 
-        public virtual int AsistenciaId { get; set; }
-        public virtual string Descripcion { get; set; }
-        public virtual DateTime FechaIni { get; set; }
-        public virtual DateTime FechaFin { get; set; }
-        public virtual DateTime HoraIni { get; set; }
-        public virtual DateTime HoraFin { get; set; }
+        public int AsistenciaId { get; set; }
+        public string Descripcion { get; set; }
+        public DateTime FechaIni { get; set; }
+        public DateTime FechaFin { get; set; }
+        public DateTime HoraIni { get; set; }
+        public DateTime HoraFin { get; set; }
         public virtual Contacto Contacto { get; set; }
         public virtual int ContactoId { get; set; }
         public virtual Usuario Usuario { get; set; }

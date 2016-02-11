@@ -13,7 +13,7 @@ namespace CodeFirstPractica1.DAL
     {
         public EmpresaContext():base("Empresa")
         {
-
+            Configuration.LazyLoadingEnabled = false;
         }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Asistencia> Asistencias { get; set; }

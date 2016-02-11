@@ -79,7 +79,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DAL\EmpresaContext.cs" />
-    <Compile Include="DAL\PropertyValidateModel.cs" />
+    <Compile Include="MantenimientoCliente.xaml.cs">
+      <DependentUpon>MantenimientoCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PropertyValidateModel.cs" />
     <Compile Include="DAL\RepositorioVisita.cs" />
     <Compile Include="DAL\RepositorioIncidencia.cs" />
     <Compile Include="DAL\RepositorioGenerico.cs" />
@@ -95,6 +98,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MantenimientoCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\201602031029396_1.cs" />
